@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical|center_horizontal"
+    android:background="@color/softGold">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/positionNum"
+        android:text="10"
+        android:textSize="75sp"
+        android:textStyle="bold"
+        android:inputType="number"
+        android:numeric="integer"
+        android:paddingBottom="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="The Absolute Worst!"
+        android:id="@+id/rating"
+        android:textSize="30sp"
+        android:paddingBottom="20dp"
+        />
+
+
+     <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Job Sector"
+        android:id="@+id/txtViewJobSector"
+        android:paddingBottom="20dp"
+        android:textSize="30sp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="75dp"
+        android:id="@+id/imgEmoticon"
+        android:src="@drawable/feeling_9"
+        android:paddingBottom="10dp"
+
+        />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:src="@drawable/wprlogo_orangebackground"
+        />
+
+
+
+</LinearLayout>
