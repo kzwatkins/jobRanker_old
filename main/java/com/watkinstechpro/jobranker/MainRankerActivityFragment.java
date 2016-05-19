@@ -60,7 +60,7 @@ public class MainRankerActivityFragment extends Fragment {
                     text += "\n\n*** The GOOD AREAS TO WORK ***".toUpperCase(Locale.US);
                 }
 
-                text += "\n" + (numJobs - index) + ". " + getPhrase(jobRanksingMap.get(value));
+                text += "\n" + (numJobs - index) + ". " + Globals.getPhrase(jobRanksingMap.get(value));
                 index++;
             }
 
@@ -68,40 +68,7 @@ public class MainRankerActivityFragment extends Fragment {
         return view;
     }
 
-    private String getPhrase(String code){
-        if(Globals.BLS_PARAMS.miningLogging.name().equals(code)) {
-            return "Mining and Logging";
-        }
-        if(Globals.BLS_PARAMS.construction.name().equals(code)) {
-            return "Construction";
-        }
-        if(Globals.BLS_PARAMS.manufacturing.name().equals(code)) {
-            return "Manufacturing";
-        }
-        if(Globals.BLS_PARAMS.tradeUtilitiesTransport.name().equals(code)) {
-            return "Trade, Utilities, or Transportation";
-        }
-        if(Globals.BLS_PARAMS.information.name().equals(code)) {
-            return "Information";
-        }
-        if(Globals.BLS_PARAMS.profBusinessServices.name().equals(code)) {
-            return "Professional and Business Services";
-        }
-        if(Globals.BLS_PARAMS.educationAndHealth.name().equals(code)) {
-            return "Education and Health";
-        }
-        if(Globals.BLS_PARAMS.leisureHosp.name().equals(code)) {
-            return "Leisure and Hospitality Services";
-        }
-        if(Globals.BLS_PARAMS.otherServices.name().equals(code)) {
-            return "Other Services";
-        }
-        if(Globals.BLS_PARAMS.government.name().equals(code)) {
-            return "State and Federal Government";
-        }
 
-        return null;
-    }
 
     private ArrayList<String> toAryList(String[] ary){
         if(ary == null || ary.length == 0) return null;
