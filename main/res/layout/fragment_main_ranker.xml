@@ -14,7 +14,9 @@
         android:layout_height="wrap_content"
         android:id="@+id/edtTxtJobs"
         android:layout_centerHorizontal="true"
-        android:inputType="textNoSuggestions|textCapWords|textMultiLine"
-        android:minLines="12" />
+        android:inputType="textNoSuggestions|textCapWords|none|textMultiLine"
+        android:minLines="12"
+        android:focusable="false"
+         />
 
 </RelativeLayout>

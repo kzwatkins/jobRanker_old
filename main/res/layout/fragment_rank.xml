@@ -10,88 +10,88 @@
     android:background="@color/softGold"
     android:id="@+id/emot_frag"
     >
-    <!--tools:context="com.watkinstechpro.jobranker.rankings.RankActivity$PlaceholderFragment"-->
+    <!--tools:context="com.watkinstechpro.jobranker.rankings.RankActivityOld$PlaceholderFragment"-->
 
 
-     <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-         android:paddingBottom="20dp"
-         android:gravity="center_horizontal">
+     <!--<LinearLayout-->
+        <!--android:orientation="horizontal"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="center_horizontal"-->
+         <!--android:paddingBottom="20dp"-->
+         <!--android:gravity="center_horizontal">-->
 
-         <TextView
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-             android:textColor="@color/burntSienna"
-             android:textSize="20sp"
-             android:text="@string/title_job"
-             android:layout_gravity="center" />
+         <!--<TextView-->
+             <!--android:layout_width="wrap_content"-->
+             <!--android:layout_height="wrap_content"-->
+             <!--android:textColor="@color/burntSienna"-->
+             <!--android:textSize="20sp"-->
+             <!--android:text="@string/title_job"-->
+             <!--android:layout_gravity="center" />-->
 
-         <ImageView
-        android:layout_width="50dp"
-        android:layout_height="150dp"
-        android:src="@drawable/jobladderlowest_orange" />
+         <!--<ImageView-->
+        <!--android:layout_width="50dp"-->
+        <!--android:layout_height="150dp"-->
+        <!--android:src="@drawable/jobladderlowest_orange" />-->
 
-         <TextView
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-             android:textColor="@color/burntSienna"
-             android:textSize="20sp"
-             android:text="@string/title_ranker"
-             android:layout_gravity="center" />
-
-
-     </LinearLayout>
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_gravity="center_horizontal"
-        >
+         <!--<TextView-->
+             <!--android:layout_width="wrap_content"-->
+             <!--android:layout_height="wrap_content"-->
+             <!--android:textColor="@color/burntSienna"-->
+             <!--android:textSize="20sp"-->
+             <!--android:text="@string/title_ranker"-->
+             <!--android:layout_gravity="center" />-->
 
 
-         <TextView
-             android:id="@+id/txtViewRank"
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-             android:textColor="@color/burntSienna"
-             android:gravity="center_horizontal"
-             android:textSize="30sp"
-             android:paddingBottom="20dp"
-             android:paddingRight="20dp"
-             android:text="@string/rank_10"
-             android:layout_gravity="center_horizontal" />
+     <!--</LinearLayout>-->
+    <!--<LinearLayout-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:orientation="horizontal"-->
+        <!--android:layout_gravity="center_horizontal"-->
+        <!-->-->
 
-         <TextView
-             android:id="@+id/txtViewRankDesc"
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-             android:text="@string/rank_worst"
-             android:textColor="@color/burntSienna"
-             android:gravity="center_horizontal"
-             android:textSize="30sp"
-             android:paddingBottom="20dp"
-             android:layout_gravity="center_horizontal" />
-    </LinearLayout>
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="100dp"
-        android:layout_gravity="center"
-        android:id="@+id/feelingImg"
-        android:src="@drawable/feeling_9"
-        android:paddingBottom="20dp"/>
+         <!--<TextView-->
+             <!--android:id="@+id/txtViewRank"-->
+             <!--android:layout_width="wrap_content"-->
+             <!--android:layout_height="wrap_content"-->
+             <!--android:textColor="@color/burntSienna"-->
+             <!--android:gravity="center_horizontal"-->
+             <!--android:textSize="30sp"-->
+             <!--android:paddingBottom="20dp"-->
+             <!--android:paddingRight="20dp"-->
+             <!--android:text="@string/rank_10"-->
+             <!--android:layout_gravity="center_horizontal" />-->
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/edtTxtRankFact"
-        android:layout_centerHorizontal="true"
-        android:inputType="textNoSuggestions|textCapWords|textMultiLine"
-        android:minLines="2"
-        android:editable="false" />
+         <!--<TextView-->
+             <!--android:id="@+id/txtViewRankDesc"-->
+             <!--android:layout_width="wrap_content"-->
+             <!--android:layout_height="wrap_content"-->
+             <!--android:text="@string/rank_worst"-->
+             <!--android:textColor="@color/burntSienna"-->
+             <!--android:gravity="center_horizontal"-->
+             <!--android:textSize="30sp"-->
+             <!--android:paddingBottom="20dp"-->
+             <!--android:layout_gravity="center_horizontal" />-->
+    <!--</LinearLayout>-->
+
+    <!--<ImageView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="100dp"-->
+        <!--android:layout_gravity="center"-->
+        <!--android:id="@+id/feelingImg"-->
+        <!--android:src="@drawable/feeling_9"-->
+        <!--android:paddingBottom="20dp"/>-->
+
+    <!--<EditText-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:id="@+id/edtTxtRankFact"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:inputType="textNoSuggestions|textCapWords|textMultiLine"-->
+        <!--android:minLines="2"-->
+        <!--android:editable="false" />-->
 
 
 </LinearLayout>
