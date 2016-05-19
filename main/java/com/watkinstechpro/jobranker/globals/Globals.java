@@ -18,6 +18,8 @@ public class Globals extends Application {
     private static Globals instance;
     public static int BEGIN_YEAR = 2012;
     public static int END_YEAR = 2022;
+    public static int MAX_JOB_RANKS = 10;
+
 
     @Override
     public void onCreate() {
@@ -63,6 +65,7 @@ public class Globals extends Application {
     public static final Map<String, LinearEquation> BLS_EMPLOYMENT_MAP;
     public static final Map<String, Integer> BLS_SALARY_MAP;
     public static final String[] BLS_FACTS;
+    public static final Map<Integer, String> RANKINGS;
 
     static {
         //BLS_NATL_EMPLOYMENT_MAP = Collections.unmodifiableMap(getBlsNatlEmploymentMap());
@@ -72,6 +75,7 @@ public class Globals extends Application {
         BLS_EMPLOYMENT_MAP = Collections.unmodifiableMap(getBlsEmploymentMap());
         BLS_SALARY_MAP = Collections.unmodifiableMap(getBlsSalaryMap());
         BLS_FACTS = getBlsFacts();
+        RANKINGS = getRankings();
     }
 
     private static String[] getBlsFacts(){
@@ -101,7 +105,7 @@ public class Globals extends Application {
 //    }
 
     private static Map<String, Double> getBlsJobInundationMap() {
-        Map<String, Double> map = new HashMap<>(11);
+        Map<String, Double> map = new HashMap<>(BLS_PARAMS.values().length);
         map.put(BLS_PARAMS.total.name(), 0.9459);
         map.put(BLS_PARAMS.miningLogging.name(), 0.975); // included with construction
         map.put(BLS_PARAMS.construction.name(), 0.975);
@@ -118,7 +122,7 @@ public class Globals extends Application {
     }
 
     private static Map<String, Double> getBlsUnemploymentRateMap() {
-        Map<String, Double> map = new HashMap<>(11);
+        Map<String, Double> map = new HashMap<>(BLS_PARAMS.values().length);
         map.put(BLS_PARAMS.total.name(), 0.048);
         map.put(BLS_PARAMS.miningLogging.name(), 0.094);
         map.put(BLS_PARAMS.construction.name(), 0.062);
@@ -135,7 +139,7 @@ public class Globals extends Application {
     }
 
     private static Map<String, Integer> getBlsSalaryMap() {
-        Map<String, Integer> map = new HashMap<>(8);
+        Map<String, Integer> map = new HashMap<>(EDUCATION_LEVELS.values().length);
         map.put(EDUCATION_LEVELS.total.name(), 34750);
         map.put(EDUCATION_LEVELS.phd.name(), 96420);
         map.put(EDUCATION_LEVELS.ms.name(), 63400);
@@ -149,8 +153,25 @@ public class Globals extends Application {
         return map;
     }
 
+    private static Map<Integer, String> getRankings() {
+        Map<Integer, String> map = new HashMap<>(MAX_JOB_RANKS);
+        map.put(0, "The Very Best!");
+        map.put(1, "Much Better");
+        map.put(2, "Pretty Good");
+        map.put(3, "Not Too Shabby");
+        map.put(4, "Fairly Average");
+        map.put(5, "Just Alright");
+        map.put(6, "Kinda Okay");
+        map.put(7, "Not out of the Woods Yet");
+        map.put(8, "It Could Have Been Worse");
+        map.put(9, "The Absolute Worst!");
+
+        return map;
+    }
+
+
     private static Map<String, LinearEquation> getBlsJobGrowthByEdMap() {
-        Map<String, LinearEquation> map = new HashMap<>(9);
+        Map<String, LinearEquation> map = new HashMap<>(MAX_JOB_RANKS);
 
         map.put("total", new LinearEquation(1953.4875, -3785061.05));
         map.put("phd", new LinearEquation(179.8, -156555.2));
@@ -167,7 +188,7 @@ public class Globals extends Application {
 
     private static Map<String, LinearEquation> getBlsEmploymentMap(){
         // http://www.bls.gov/news.release/ecopro.t03.htm
-        Map<String, LinearEquation> map = new HashMap<>(10);
+        Map<String, LinearEquation> map = new HashMap<>(BLS_PARAMS.values().length);
 
 
         map.put(BLS_PARAMS.total.name(), new LinearEquation(BEGIN_YEAR, 145355.8, END_YEAR, 160983.7));
@@ -197,4 +218,41 @@ public class Globals extends Application {
         }
         return false;
     }
+
+    public static String getPhrase(String code){
+        if(BLS_PARAMS.miningLogging.name().equals(code)) {
+            return "Mining and Logging";
+        }
+        if(BLS_PARAMS.construction.name().equals(code)) {
+            return "Construction";
+        }
+        if(BLS_PARAMS.manufacturing.name().equals(code)) {
+            return "Manufacturing";
+        }
+        if(BLS_PARAMS.tradeUtilitiesTransport.name().equals(code)) {
+            return "Trade, Utilities, or Transportation";
+        }
+        if(BLS_PARAMS.information.name().equals(code)) {
+            return "Information";
+        }
+        if(BLS_PARAMS.profBusinessServices.name().equals(code)) {
+            return "Professional and Business Services";
+        }
+        if(BLS_PARAMS.educationAndHealth.name().equals(code)) {
+            return "Education and Health";
+        }
+        if(BLS_PARAMS.leisureHosp.name().equals(code)) {
+            return "Leisure and Hospitality Services";
+        }
+        if(BLS_PARAMS.otherServices.name().equals(code)) {
+            return "Other Services";
+        }
+        if(BLS_PARAMS.government.name().equals(code)) {
+            return "State and Federal Government";
+        }
+
+        return null;
+    }
+
+    
 }
