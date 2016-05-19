@@ -1,19 +1,33 @@
 <resources>
-    <string name="app_name" translatable="false">JobRanker</string>
+    <string name="app_name" translatable="false">Job Ranker</string>
     <string name="wpr_name" translatable="false">Watkins Proactive Research LLC</string>
     <string name="title_activity_settings" translatable="false">Title Activity Settings</string>
-    <string name="title_app" translatable="false">JobRanker!!</string>
-    <string name="title_activity_worst">WorstActivity</string>
-    <string name="action_settings">Settings</string>
-    <string name="section_format">Hello World from section: %1$d</string>
-    <string name="title_activity_careers">CareersActivity</string>
+    <string name="title_app" translatable="false">Job Ranker!!</string>
+    <string name="title_activity_worst" translatable="false">WorstActivity</string>
+    <string name="action_settings" translatable="false">Settings</string>
+    <string name="section_format" translatable="false">Hello World from section: %1$d</string>
+    <string name="title_activity_rank" translatable="false">Rank Activity</string>
+    <string name="rank_worst" translatable="false">The Absolute Worst</string>
+    <string name="rank_10" translatable="false">#10</string>
+    <string name="title_job" translatable="false">Job</string>
+    <string name="title_ranker" translatable="false">Ranker</string>
+    <string name="title_activity_careers" translatable="false">Careers</string>
 
-    <string name="interstitial_ad_sample">Interstitial Ad Sample</string>
-    <string name="start_level">Level 1</string>
-    <string name="next_level">Next Level</string>
-    <!-- -
-        This is an ad unit ID for an interstitial test ad. Replace with your own interstitial ad unit id.
-        For more information, see https://support.google.com/admob/answer/3052638
-    <!- -->
-    <string name="interstitial_ad_unit_id">ca-app-pub-3940256099942544/1033173712</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
+    <string name="title_activity_ranking" translatable="false">RankingActivity</string>
+
+    <string-array name="sayings" translatable="false">
+        <item translatable="false">The Very Best!</item>
+        <item translatable="false">Much Better</item>
+        <item translatable="false">Pretty Good</item>
+        <item translatable="false">Not Too Shabby</item>
+        <item translatable="false">Fairly Average</item>
+        <item translatable="false">Just Alright</item>
+        <item translatable="false">Kinda Okay</item>
+        <item translatable="false">Not out of the Woods</item>
+        <item translatable="false">Almost the Worst</item>
+        <item translatable="false">The Absolute Worst!</item>
+    </string-array>
+    <string name="title_activity_scrolling" translatable="false">ScrollingActivity</string>
 </resources>
